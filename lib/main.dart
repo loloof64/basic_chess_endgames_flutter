@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'chess_widget.dart';
+import 'engine_communication.dart';
 
 void main() => runApp(new MyApp());
 
@@ -39,6 +40,9 @@ class _MyHomePage extends State<MyHomePage> {
           padding: EdgeInsets.all(minScreenDim * 0.05),
           child: ChessWidget(dimension: minScreenDim * 0.7),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(onPressed: () => printOsArchitecture(),
+        child: Icon(Icons.play_arrow),
       ),
     );
   }
